@@ -20,6 +20,86 @@ header, body {
   padding: 0px;
 }
 
+.fa-solid, button, article {
+  cursor: pointer;
+}
+
+footer {
+  padding: 20px;
+  height: 215px;
+  background-color: #353535;
+  color: white;
+}
+footer i {
+  align-self: center;
+  margin-right: 10px;
+}
+footer h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+footer p {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 300;
+}
+footer .logoposition {
+  display: flex;
+  flex-direction: column;
+}
+footer .iconleft {
+  display: flex;
+}
+
+.toppart {
+  height: 80px;
+  display: grid;
+  background-color: white;
+  filter: drop-shadow(0px 2px 2px grey);
+}
+.toppart h1 {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+}
+.toppart i {
+  font-size: 25px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.heartposition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.heartposition i {
+  font-size: 25px;
+}
+.heartposition .fa-solid {
+  opacity: 0;
+  position: absolute;
+  background: linear-gradient(180deg, rgb(225, 112, 218) 50%, rgb(161, 91, 220) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  transition: opacity 1s;
+}
+.heartposition .fa-solid:hover {
+  opacity: 1;
+}
+
 .opacityanimation {
   animation: fadeIn 2s ease-in-out forwards;
 }
@@ -56,24 +136,7 @@ header, body {
     top: 30%;
   }
 }
-.firstpart {
-  height: 80px;
-  display: grid;
-  background-color: white;
-  filter: drop-shadow(0px 2px 2px grey);
-}
-.firstpart h1 {
-  position: absolute;
-  justify-self: center;
-  align-self: center;
-}
-.firstpart i {
-  font-size: 25px;
-  margin-top: 30px;
-  margin-left: 30px;
-}
-
-.secondpart {
+.localisationpart {
   display: flex;
   justify-content: center;
   font-size: 20px;
@@ -82,25 +145,11 @@ header, body {
   color: #353535;
   align-items: center;
 }
-.secondpart i {
+.localisationpart i {
   padding: 10px;
 }
-.secondpart--modif img {
-  width: 100%;
-  height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 
-button {
-  cursor: pointer;
-}
-
-.fa-solid {
-  cursor: pointer;
-}
-
-.thirdpart {
+.buttonpart {
   display: flex;
   flex-direction: column;
   padding-left: 50px;
@@ -108,7 +157,7 @@ button {
   background-color: #f6f6f6;
   padding-bottom: 50px;
 }
-.thirdpart button {
+.buttonpart button {
   height: 70px;
   border-radius: 40px;
   border: none;
@@ -119,65 +168,30 @@ button {
   filter: drop-shadow(0px 5px 5px #c7c7c7);
   color: white;
 }
-.thirdpart button a {
+.buttonpart button a {
   color: white;
 }
-.thirdpart button:hover {
+.buttonpart button:hover {
   background: rgb(214, 134, 209);
   background: linear-gradient(180deg, rgb(221, 150, 216) 50%, rgb(174, 130, 210) 100%);
   filter: drop-shadow(0px 5px 5px #9c9c9c);
 }
 
-.fifthpart--modif button {
-  height: 70px;
-  width: 40%;
-  border-radius: 40px;
-  border: none;
-  background: rgb(225, 112, 218);
-  background: linear-gradient(180deg, rgb(225, 112, 218) 50%, rgb(161, 91, 220) 100%);
-  color: white;
-  font-size: 22px;
-  font-weight: 500;
-  filter: drop-shadow(0px 5px 5px #c7c7c7);
-}
-.fifthpart--modif button:hover {
-  background: rgb(214, 134, 209);
-  background: linear-gradient(180deg, rgb(221, 150, 216) 50%, rgb(174, 130, 210) 100%);
-  filter: drop-shadow(0px 5px 5px #9c9c9c);
-}
-
-article {
-  cursor: pointer;
-}
-
-.fifthpart--modif article {
-  outline: solid 9px #f3f3f3;
-}
-
-.greybloc {
-  width: 59px;
-  height: 100%;
-  position: absolute;
-  background: #f4f4f4;
-  margin-left: 100%;
-  outline: solid 2px #f4f4f4;
-}
-
-.fourthpart {
+.vignettepart {
   display: flex;
   flex-direction: column;
 }
-.fourthpart article {
+.vignettepart article {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80px;
   margin-bottom: 30px;
 }
-.fourthpart h2 {
+.vignettepart h2 {
   margin-left: 20px;
 }
-.fourthpart span {
+.vignettepart span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,13 +203,12 @@ article {
   background-color: #9356dc;
   color: white;
 }
-.fourthpart i {
+.vignettepart i {
   color: #7e7e7e;
   padding: 20px;
   font-size: 25px;
 }
-
-.vignette {
+.vignettepart .vignette {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -205,55 +218,44 @@ article {
   background-color: #f6f6f6;
   filter: drop-shadow(0px 3px 5px #c7c7c7);
 }
-.vignette h3 {
+.vignettepart .vignette i {
+  color: #9356dc;
+}
+.vignettepart h3 {
   font-weight: 300;
 }
 
-.vignette:hover i {
-  color: #9356dc;
-}
-
-.fifthpart {
+.restaurantpart {
   background-color: #f6f6f6;
   padding: 25px;
 }
-.fifthpart article {
+.restaurantpart article {
   background-color: white;
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
   border-radius: 20px;
 }
-.fifthpart img {
+.restaurantpart img {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   border-radius: 15px 15px 0px 0px;
 }
-.fifthpart h3 {
+.restaurantpart h3 {
   padding-left: 15px;
   margin-bottom: 5px;
 }
-.fifthpart p {
+.restaurantpart p {
   padding-left: 15px;
   margin-top: 0px;
 }
-.fifthpart--modif {
-  position: relative;
-  margin-top: -55px;
-  z-index: 1;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-}
-.fifthpart--modif .titreprincipal {
-  justify-content: flex-start;
-}
-.fifthpart .nouveau {
+.restaurantpart .nouveau {
   display: flex;
   justify-content: flex-end;
 }
-.fifthpart .nouveau span {
+.restaurantpart .nouveau span {
   height: 30px;
   width: 80px;
   border-radius: 3px;
@@ -265,233 +267,18 @@ article {
   margin-top: 15px;
   margin-right: 15px;
 }
-.fifthpart .heartposition {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  margin-right: 20px;
-}
-.fifthpart .heartposition i {
-  font-size: 25px;
-}
-.fifthpart .heartposition .fa-solid {
-  opacity: 0;
-  position: absolute;
-  background: linear-gradient(180deg, rgb(225, 112, 218) 50%, rgb(161, 91, 220) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  transition: opacity 1s;
-}
-.fifthpart .heartposition .fa-solid:hover {
-  opacity: 1;
-}
-
-footer {
-  padding: 20px;
-  height: 215px;
-  background-color: #353535;
-  color: white;
-}
-footer i {
-  align-self: center;
-  margin-right: 10px;
-}
-footer h3 {
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-footer p {
-  font-size: 15px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-footer a {
-  color: white;
-  text-decoration: none;
-}
-footer h2 {
-  font-family: "Shrikhand", sans-serif;
-  font-weight: 300;
-}
-
-.logoposition {
-  display: flex;
-  flex-direction: column;
-}
-
-.iconleft {
-  display: flex;
-}
-
-.ligne {
-  display: flex;
-  width: 30px;
-  height: 3px;
-  background-color: #99e2d0;
-  margin-top: -15px;
-  margin-bottom: 20px;
-}
-
-.menuparts article {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-.menuparts__1 {
-  animation: fadeIn2 2s ease-in-out forwards;
-}
-
-.menuparts__2 {
-  animation: fadeIn2 4s ease-in-out forwards;
-}
-
-.menuparts__3 {
-  animation: fadeIn2 6s ease-in-out forwards;
-}
-
-@keyframes fadeIn2 {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.description {
+.restaurantpart .description {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-.descriptionmenu {
-  width: 85%;
-}
-
-.rightpart {
-  display: flex;
-  z-index: -1;
-  background-color: #99e2d0;
-  transition: transform 1s ease-in-out;
-}
-.rightpart i {
-  display: flex;
-  color: white;
-  align-items: center;
-  height: 100%;
-  padding-left: 20px;
-  padding-right: 21px;
-}
-.rightpart p {
-  position: absolute;
-  margin-top: 50px;
-  margin-left: -70px;
-}
-
-article:not(:hover) .rightpart {
-  transform: translate(58px);
-}
-
-.titreprincipal {
-  display: flex;
-  justify-content: space-evenly;
-}
-.titreprincipal h1 {
-  padding-right: 40px;
-}
-.titreprincipal i {
-  font-size: 30px;
-  padding-top: 20px;
-  padding-left: 0px;
-}
-.titreprincipal .fa-solid {
-  margin-left: -40 !important;
-}
-
-.menuparts article {
-  filter: drop-shadow(2px 2px 30px #f1f1f1);
-}
-.menuparts article h3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.menuparts article p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 @media screen and (min-width: 767px) {
-  .fifthpart--modif .titreprincipal {
-    justify-content: center;
-  }
-  .thirdpart {
-    align-items: center;
-  }
-  .thirdpart button {
-    width: 330px;
-    margin-top: 20px;
-  }
-  .thirdpart--modif {
-    width: 70%;
-    margin-left: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-  .fourthpart {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-  .vignettesection {
-    display: flex;
-    flex-direction: row;
-  }
-  .vignette {
-    height: 70px;
-  }
-  .fourthpart article {
-    width: 32%;
-  }
-  .fifthpart {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-  .fifthpart h2 {
-    width: 100%;
-  }
-  .fifthpart--modif {
-    flex-direction: column;
-    width: 70%;
-    margin-left: 5%;
-  }
-  .fifthpart article {
-    width: 45%;
-  }
-  .fifthpart--modif article {
-    width: 100%;
-  }
-  .grosbloc {
-    margin-left: 78%;
-  }
   footer {
     display: flex;
     flex-direction: row-reverse;
     height: 50px;
     padding-top: 60px;
-  }
-  .logoposition {
-    display: flex;
-    flex-direction: row;
   }
   footer p {
     padding-left: 20px;
@@ -504,5 +291,43 @@ article:not(:hover) .rightpart {
     margin-left: 100px;
     margin-top: 0px;
     margin-right: 100px;
+  }
+  footer .logoposition {
+    display: flex;
+    flex-direction: row;
+  }
+  .buttonpart {
+    align-items: center;
+  }
+  .buttonpart button {
+    width: 330px;
+    margin-top: 20px;
+  }
+  .vignettepart {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .vignettepart .vignettesection {
+    display: flex;
+    flex-direction: row;
+  }
+  .vignettepart .vignette {
+    height: 70px;
+  }
+  .vignettepart article {
+    width: 32%;
+  }
+  .restaurantpart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .restaurantpart h2 {
+    width: 100%;
+  }
+  .restaurantpart article {
+    width: 45%;
   }
 }/*# sourceMappingURL=sassstyle.css.map */
